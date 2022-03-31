@@ -1,7 +1,7 @@
-import './App.css';
 import useExchangeRates from '../../hooks/useExchangeRates';
 import ExchangeRateForm from '../ExchangeRateForm';
 import RateList from '../RateList';
+import { Container, Title, Error } from './styled';
 
 function App() {
   const { isFetching, data, isError } = useExchangeRates();
@@ -9,19 +9,20 @@ function App() {
 
   if (isError) {
     return (
-      <div>
-        Sorry, unknown fetch error occurred...
-      </div>
+      <Container>
+        <Error>
+          Sorry, unknown fetch error occurred...
+        </Error>
+      </Container>
     );
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <ExchangeRateForm rates={data} isFetching={isFetching} />
-        <RateList rates={data} isFetching={isFetching} />
-      </header>
-    </div>
+    <Container className="App">
+      <Title>Exchange Rate</Title>
+      <ExchangeRateForm rates={data} isFetching={isFetching} />
+      <RateList rates={data} isFetching={isFetching} />
+    </Container>
   );
 }
 

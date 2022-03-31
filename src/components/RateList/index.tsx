@@ -1,6 +1,6 @@
 import { IExchangeRate } from '../../types';
 import RateElement from '../RateElement';
-
+import { Container, List } from './styled';
 
 interface RateListProps {
   rates?: IExchangeRate[];
@@ -9,11 +9,10 @@ interface RateListProps {
 
 export default function RateList({ rates }: RateListProps) {
   return (
-    <div>
-      Rate List
-      <ul>
+    <Container>
+      <List>
         {rates && rates.map((rate, i) => <RateElement key={i} rate={rate} />)}
-      </ul>
-    </div>
+      </List>
+    </Container>
   );
 }
