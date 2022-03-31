@@ -4,17 +4,22 @@ import ExchangeRateForm from '../ExchangeRateForm';
 import RateList from '../RateList';
 
 function App() {
-  const { isFetching, data, isError, error } = useExchangeRates();
+  const { isFetching, data, isError } = useExchangeRates();
 
-  console.log({
-    isFetching, data, isError, error,
-  });
+
+  if (isError) {
+    return (
+      <div>
+        Sorry, unknown fetch error occurred...
+      </div>
+    );
+  }
 
   return (
     <div className="App">
       <header className="App-header">
-        <ExchangeRateForm />
-        <RateList />
+        <ExchangeRateForm rates={data} isFetching={isFetching} />
+        <RateList rates={data} isFetching={isFetching} />
       </header>
     </div>
   );

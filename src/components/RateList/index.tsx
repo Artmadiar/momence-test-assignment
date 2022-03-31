@@ -4,6 +4,7 @@ import RateElement from '../RateElement';
 
 interface RateListProps {
   rates?: IExchangeRate[];
+  isFetching: boolean;
 }
 
 export default function RateList({ rates }: RateListProps) {
@@ -11,7 +12,7 @@ export default function RateList({ rates }: RateListProps) {
     <div>
       Rate List
       <ul>
-        {rates && rates.map((rate) => <RateElement rate={rate} />)}
+        {rates && rates.map((rate, i) => <RateElement key={i} rate={rate} />)}
       </ul>
     </div>
   );
