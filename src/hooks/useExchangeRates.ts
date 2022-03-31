@@ -13,7 +13,7 @@ function parseResponse(text: string): IExchangeRate[] {
   rows.shift();
 
   // remove unnecessary last empty string
-  rows.shift();
+  rows.pop();
 
   const rates: IExchangeRate[] = rows.map((row: string) => {
     // parse row: země|měna|množství|kód|kurz
