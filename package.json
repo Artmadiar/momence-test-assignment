@@ -1,5 +1,12 @@
 {
   "name": "test-assignment",
+  "author": {
+    "name": "artmadiar",
+    "email": "artmadiar@gmail.com"
+  },
+  "engines": {
+    "node": ">=14"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
