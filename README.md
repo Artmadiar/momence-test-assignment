@@ -4,14 +4,14 @@
 
 Create a simple [Create React App](https://github.com/facebook/create-react-app) that:
 
-- [ ] 1. After its launch, it downloads the current exchange rate ticket from the Czech National Bank website.
+- [x] 1. After its launch, it downloads the current exchange rate ticket from the Czech National Bank website.
 - API:
   URL: https://www.cnb.cz/cs/financni-trhy/devizovy-trh/kurzy-devizoveho-trhu/kurzy-devizoveho-trhu/denni_kurz.txt
   Documentation: https://www.cnb.cz/cs/casto-kladene-dotazy/Kurzy-devizoveho-trhu-na-www-strankach-CNB/
-- [ ] 2. It processes the downloaded data and displays it clearly to the user.
-- [ ] 3. Connect a simple form where the user enters the amount in CZK and at the press of a button, the user is shown the conversion to the currency of his choice using the current exchange rate.
-- [ ] 4. Commit the code continuously. Upload the result to GitHub or another repository.
-- [ ] 5. Tech. stack - React (+ Hooks), TypeScript, Styled Components, React Query
+- [x] 2. It processes the downloaded data and displays it clearly to the user.
+- [x] 3. Connect a simple form where the user enters the amount in CZK and at the press of a button, the user is shown the conversion to the currency of his choice using the current exchange rate.
+- [x] 4. Commit the code continuously. Upload the result to GitHub or another repository.
+- [x] 5. Tech. stack - React (+ Hooks), TypeScript, Styled Components, React Query
 
 ## Available Scripts
 
